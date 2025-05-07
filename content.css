@@ -12,7 +12,7 @@ h1, h2, .top-banner h1 {
 /* Top Banner */
 .top-banner {
   height: 150px;
-  background: url('Images/webpage1.png') no-repeat center 60%;
+  background: url('images/webpage1.png') no-repeat center 60%;
   background-size: cover;
   color: white;
   display: flex;
