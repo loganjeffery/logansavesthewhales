@@ -93,13 +93,13 @@ body {
 
 /* Individual box backgrounds */
 .box1 {
-  background-image: url('Images/box1.png');
+  background-image: url('images/box1.png');
 }
 .box2 {
-  background-image: url('Images/box2.png');
+  background-image: url('images/box2.png');
 }
 .box3 {
-  background-image: url('Images/box3.png');
+  background-image: url('images/box3.png');
 }
 
 /* Add dark overlay for contrast */
