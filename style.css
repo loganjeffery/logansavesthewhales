@@ -12,7 +12,7 @@ body {
 
 .hero {
   height: 100vh;
-  background: url('Images/whale1.png') no-repeat center center/cover;
+  background: url('images/whale1.png') no-repeat center center/cover;
   position: relative;
   overflow: hidden;
 }
