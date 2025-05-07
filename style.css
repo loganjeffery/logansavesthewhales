@@ -1,0 +1,191 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;  /* prevents right-scroll */
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Serif Pro', serif;
+  background: #ffffff;  /* changed from glacier blue */
+}
+
+.hero {
+  height: 100vh;
+  background: url('Images/whale1.png') no-repeat center center/cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at center, transparent 20%, white 100%);
+  pointer-events: none;
+}
+
+/* Hero font */
+.name-left, .name-right {
+  position: absolute;
+  top: 58%;
+  font-size: 2.5em;
+  color: white;
+  letter-spacing: 0.5em;
+  font-family: 'Cinzel', serif;
+  white-space: nowrap;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.name-left {
+  left: 8%;
+}
+
+.name-right {
+  right: 8%;
+}
+
+.intro-links {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 60px 20px 80px;
+}
+
+.sections {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.section-box {
+  flex: 1;
+  margin: 0 20px;
+  height: 220px;
+  position: relative;
+  font-size: 2em;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+.sections a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;        /* key fix */
+  align-items: center;  /* vertical centering */
+  justify-content: center; /* horizontal centering */
+}
+
+
+.section-box:hover {
+  transform: scale(1.03); /* subtle expansion */
+}
+
+/* Individual box backgrounds */
+.box1 {
+  background-image: url('Images/box1.png');
+}
+.box2 {
+  background-image: url('Images/box2.png');
+}
+.box3 {
+  background-image: url('Images/box3.png');
+}
+
+/* Add dark overlay for contrast */
+.section-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.label-frame {
+  position: relative;
+  z-index: 2;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(3px);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 500px;
+  margin: 40px auto 0;
+}
+
+.social-icon {
+  height: 40px; /* adjust as needed */
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+}
+
+.glacier-background {
+  background-color: #c8dcea;
+  padding-top: 10px; /* or even 0 if you want it tighter */
+}
+
+.about,
+.mountain-list,
+footer {
+  background-color: #c8dcea;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 80px auto 80px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #e1ecf4;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about img {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+  background-color: white; /* optional */
+  padding: 5px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1); /* subtle frame */
+  margin-right: 30px;
+  object-fit: contain;
+}
+
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #ccc;
+  font-size: 0.9em;
+  line-height: 1.6;
+}

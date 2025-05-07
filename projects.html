@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adventures | Logan Saves the Whales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="content.css">
+</head>
+<body>
+
+  <header class="top-banner">
+    <h1>P R O J E C T S</h1>
+  </header>
+
+  <main class="tile-grid-wrapper">
+
+    <div class="tile-grid">
+
+      <!-- First Row Tiles -->
+      <div class="tile" onclick="toggleDetails(this, 'website')">
+        <img src="Images/proj_website.png" alt="website" class="tile-img" />
+        <div class="tile-label">WEBSITE</div>
+      </div>
+
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+
+      <!-- Second Row Tiles -->
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+
+    </div>
+
+    <div id="expanded-details" class="tile-details-box">
+      <div class="details-inner">
+        <h2 id="details-title">ADVENTURE</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet nulla a odio pharetra ullamcorper...
+        </p>
+        <p>
+          Mauris viverra, urna eu tincidunt lacinia, nunc nisl sodales lorem, eget convallis nunc elit nec justo...
+        </p>
+        <p>
+          Curabitur vel lorem vel quam sagittis imperdiet. Sed condimentum magna at sapien tincidunt faucibus...
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+
+
+  <footer>
+    Version 3.0 <br>
+    Last updated: May 2, 2025
+  </footer>
+
+
+  <script>
+    function toggleDetails(tile, title) {
+      const box = document.getElementById('expanded-details');
+      const titleEl = document.getElementById('details-title');
+
+      if (box.classList.contains('open') && titleEl.textContent === title) {
+        box.classList.remove('open');
+      } else {
+        titleEl.textContent = title;
+        box.classList.add('open');
+      }
+    }
+  </script>
+
+
+</body>
+</html>
